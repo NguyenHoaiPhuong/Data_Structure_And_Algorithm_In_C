@@ -14,5 +14,7 @@ public:
 
 	void Insert(const double& data);
 	CLLNode* Find(const long& key);
+	void Remove(const long& key);
+	void RemoveAll();
 	void Print();
 };

@@ -67,3 +67,16 @@ bool CLLNode::IsExisting(const long & key)
 			return m_pNext->IsExisting(key);
 	}
 }
+
+void CLLNode::Remove(const long & key, CLLNode* pParent)
+{
+	if (m_iKey == key)
+	{
+		pParent->SetNextNode(m_pNext.release());
+		delete this;
+	}
+	else
+	{
+		m_pNext->Remove(key, this);
+	}
+}
