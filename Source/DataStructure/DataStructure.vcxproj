@@ -154,11 +154,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BSTNode.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LLNode.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BST.h" />
+    <ClInclude Include="BSTNode.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LLNode.h" />
   </ItemGroup>

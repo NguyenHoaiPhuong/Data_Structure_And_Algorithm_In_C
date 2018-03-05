@@ -9,6 +9,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="BST">
+      <UniqueIdentifier>{91808c7e-3a72-46a8-82ed-f86fa85f7976}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -17,8 +20,11 @@
     <ClCompile Include="LLNode.cpp">
       <Filter>LinkedList</Filter>
     </ClCompile>
+    <ClCompile Include="BSTNode.cpp">
+      <Filter>BST</Filter>
+    </ClCompile>
     <ClCompile Include="LinkedList.cpp">
-      <Filter>Main</Filter>
+      <Filter>LinkedList</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -27,6 +33,12 @@
     </ClInclude>
     <ClInclude Include="LinkedList.h">
       <Filter>LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="BSTNode.h">
+      <Filter>BST</Filter>
+    </ClInclude>
+    <ClInclude Include="BST.h">
+      <Filter>BST</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
