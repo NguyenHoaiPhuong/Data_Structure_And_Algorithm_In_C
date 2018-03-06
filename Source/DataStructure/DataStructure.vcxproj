@@ -154,6 +154,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BST.cpp" />
     <ClCompile Include="BSTNode.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LLNode.cpp" />

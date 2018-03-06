@@ -1,16 +1,21 @@
 #pragma once
 #include <memory>
+#include <vector>
 
 class CBSTNode
 {
 	friend class CBST;
 private:
 	long m_iKey;
-	std::shared_ptr<CBSTNode> m_pLeft;
-	std::shared_ptr<CBSTNode> m_pRight;
+	std::unique_ptr<CBSTNode> m_pLeft;
+	std::unique_ptr<CBSTNode> m_pRight;
 protected:
+	CBSTNode* FindMax();
+	CBSTNode* FindMin();
 	CBSTNode* Find(const long& key);
-	void Insert(const long& key);
+	bool Insert(const long& key);
+	bool Remove(const long& key, CBSTNode* pParent);
+	void Traverse(std::vector<long>& arKey);
 public:
 	CBSTNode(const long& key);
 	~CBSTNode();
