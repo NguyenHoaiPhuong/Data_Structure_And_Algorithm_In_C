@@ -1,5 +1,8 @@
 #include "BSTNode.h"
 
+#define max(a, b)	\
+(a>b)? a : b;		\
+
 CBSTNode::CBSTNode(const long & key)
 {
 	m_iKey = key;
@@ -185,4 +188,21 @@ void CBSTNode::Traverse(std::vector<long>& arKey)
 	arKey.push_back(m_iKey);
 	if (m_pRight.get() != nullptr)
 		m_pRight->Traverse(arKey);
+}
+
+long CBSTNode::GetHeight()
+{
+	if (m_pLeft.get() == nullptr && m_pRight.get() == nullptr)
+		return 0;
+	else if (m_pLeft.get() != nullptr && m_pRight.get() == nullptr)
+		return 1 + m_pLeft->GetHeight();
+	else if (m_pLeft.get() == nullptr && m_pRight.get() != nullptr)
+		return 1 + m_pRight->GetHeight();
+	else
+	{
+		long lH = m_pLeft->GetHeight();
+		long rH = m_pRight->GetHeight();
+		long MAX = max(lH, rH);
+		return 1 + MAX;
+	}		
 }

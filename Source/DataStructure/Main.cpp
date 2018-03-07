@@ -68,12 +68,14 @@ void Test_BST()
 	Akagi.Insert(3);
 	Akagi.Insert(7);
 
-	//Akagi.Remove(4);
+	Akagi.Remove(4);
 	Akagi.Remove(8);
-	//Akagi.Remove(6);
+	Akagi.Remove(6);
 
 	std::vector<long> arKey = Akagi.Traverse();
 	Akagi.Print();
+
+	std::cout << "Tree Height: " << Akagi.GetHeight() << std::endl;
 }
 
 int main(int argc, char* argv[])

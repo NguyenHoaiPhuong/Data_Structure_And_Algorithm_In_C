@@ -16,6 +16,7 @@ protected:
 	bool Insert(const long& key);
 	bool Remove(const long& key, CBSTNode* pParent);
 	void Traverse(std::vector<long>& arKey);
+	long GetHeight();
 public:
 	CBSTNode(const long& key);
 	~CBSTNode();

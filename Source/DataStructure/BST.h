@@ -14,5 +14,6 @@ public:
 	bool Insert(const long& key);
 	bool Remove(const long& key);
 	std::vector<long> Traverse();
+	long GetHeight();
 	void Print();
 };
