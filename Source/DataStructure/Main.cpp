@@ -1,35 +1,34 @@
 #include <iostream>
 #include "LinkedList.h"
+#include "DoubleLinkedList.h"
 #include "BST.h"
 
 void Test_Shared_PTR()
 {
-	double *a = new double[3];
-	a[0] = 0;
-	a[1] = 1;
-	a[2] = 2;
+	int* p = new int(3);
 
-	std::shared_ptr<double> akagi(a);
-	//std::shared_ptr<double> yushin(a);
-	//std::shared_ptr<double> yushin = std::make_shared<double>(*a);
-	std::shared_ptr<double> yushin(akagi);
+	std::shared_ptr<int> a(p);
+	std::cout << a.use_count() << std::endl;
 
-	std::cout << akagi.get()[0] << "\t" << akagi.get()[1] << "\t" << akagi.get()[2] << "\n";
+	std::shared_ptr<int> b(a);
+	std::cout << "b useCnt = " << b.use_count() << std::endl;
 
-	std::cout << akagi.use_count() << "\n";
-	std::cout << yushin.use_count() << "\n";
+	std::shared_ptr<int> c = std::make_shared<int>(10);
+	std::cout << "c = " << *c << ", use cnt = " << c.use_count() << std::endl;
 
-	std::cout << yushin.unique() << "\n";
+	std::shared_ptr<int> d;
+	d.swap(a);
+	std::cout << d.use_count() << std::endl;
+}
 
-#if 0
-	yushin.reset();
-	std::cout << akagi.use_count() << "\n";
-	std::cout << akagi.get()[0] << "\t" << akagi.get()[1] << "\t" << akagi.get()[2] << "\n";
-#endif
+void Test_Shared_PTR_1()
+{
+	int* p = new int(10);
 
-	akagi.reset();
-	std::cout << yushin.use_count() << "\n";
-	std::cout << yushin.get()[0] << "\t" << yushin.get()[1] << "\t" << yushin.get()[2] << "\n";
+	std::shared_ptr<int> a = std::make_shared<int>(*p);
+	std::shared_ptr<int> b = a;
+
+	std::cout << "a use count = " << a.use_count() << std::endl;
 }
 
 void Test_Linked_List()
@@ -53,6 +52,24 @@ void Test_Linked_List()
 	Akagi.Print();
 
 	Akagi.RemoveAll();
+	Akagi.Print();
+}
+
+void Test_Double_Linked_List()
+{
+	CDoubleLinkedList Akagi;
+	Akagi.Insert(10);
+	Akagi.Insert(5);
+	Akagi.Insert(8);
+	Akagi.Insert(1);
+	Akagi.Insert(3);
+
+	CDLLNode* p = Akagi.Find(8);
+	CDLLNode* q = Akagi.RFind(8);
+
+	Akagi.Remove(10);
+	Akagi.Remove(8);
+
 	Akagi.Print();
 }
 
@@ -80,8 +97,11 @@ void Test_BST()
 
 int main(int argc, char* argv[])
 {
+	//Test_Shared_PTR();
+	//Test_Shared_PTR_1();
 	//Test_Linked_List();
-	Test_BST();
+	Test_Double_Linked_List();
+	//Test_BST();
 
 	getchar();
 	return 0;

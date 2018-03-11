@@ -12,6 +12,9 @@
     <Filter Include="BST">
       <UniqueIdentifier>{91808c7e-3a72-46a8-82ed-f86fa85f7976}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DoubleLinkedList">
+      <UniqueIdentifier>{d42cf90d-6e02-4561-80bb-882ed9df22b3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -29,6 +32,12 @@
     <ClCompile Include="BST.cpp">
       <Filter>BST</Filter>
     </ClCompile>
+    <ClCompile Include="DLLNode.cpp">
+      <Filter>DoubleLinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleLinkedList.cpp">
+      <Filter>DoubleLinkedList</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LLNode.h">
@@ -42,6 +51,12 @@
     </ClInclude>
     <ClInclude Include="BST.h">
       <Filter>BST</Filter>
+    </ClInclude>
+    <ClInclude Include="DLLNode.h">
+      <Filter>DoubleLinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleLinkedList.h">
+      <Filter>DoubleLinkedList</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

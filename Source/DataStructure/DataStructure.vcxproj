@@ -156,6 +156,8 @@
   <ItemGroup>
     <ClCompile Include="BST.cpp" />
     <ClCompile Include="BSTNode.cpp" />
+    <ClCompile Include="DLLNode.cpp" />
+    <ClCompile Include="DoubleLinkedList.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LLNode.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -163,6 +165,8 @@
   <ItemGroup>
     <ClInclude Include="BST.h" />
     <ClInclude Include="BSTNode.h" />
+    <ClInclude Include="DLLNode.h" />
+    <ClInclude Include="DoubleLinkedList.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LLNode.h" />
   </ItemGroup>
