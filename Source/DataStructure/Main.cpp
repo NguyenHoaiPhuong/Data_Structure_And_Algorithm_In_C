@@ -2,6 +2,7 @@
 #include "LinkedList.h"
 #include "DoubleLinkedList.h"
 #include "BST.h"
+#include "AVLTree.h"
 
 void Test_Shared_PTR()
 {
@@ -64,11 +65,12 @@ void Test_Double_Linked_List()
 	Akagi.Insert(1);
 	Akagi.Insert(3);
 
-	CDLLNode* p = Akagi.Find(8);
-	CDLLNode* q = Akagi.RFind(8);
-
 	Akagi.Remove(10);
 	Akagi.Remove(8);
+	Akagi.Remove(3);
+
+	CDLLNode* p = Akagi.Find(1);
+	CDLLNode* q = Akagi.RFind(1);
 
 	Akagi.Print();
 }
@@ -95,13 +97,33 @@ void Test_BST()
 	std::cout << "Tree Height: " << Akagi.GetHeight() << std::endl;
 }
 
+void Test_AVL_Tree()
+{
+	CAVLTree Akagi;
+	Akagi.Insert(20);
+	Akagi.Insert(5);
+	Akagi.Insert(50);
+	Akagi.Insert(10);
+	Akagi.Insert(30);
+	Akagi.Insert(40);
+	Akagi.Insert(15);
+
+	std::vector<long> array = Akagi.TraverseTree();
+	for (long i = 0; i < array.size(); i++)
+	{
+		std::cout << array[i] << "\t";
+	}
+	std::cout << std::endl;
+}
+
 int main(int argc, char* argv[])
 {
 	//Test_Shared_PTR();
 	//Test_Shared_PTR_1();
 	//Test_Linked_List();
-	Test_Double_Linked_List();
+	//Test_Double_Linked_List();
 	//Test_BST();
+	Test_AVL_Tree();
 
 	getchar();
 	return 0;

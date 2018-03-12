@@ -15,6 +15,9 @@
     <Filter Include="DoubleLinkedList">
       <UniqueIdentifier>{d42cf90d-6e02-4561-80bb-882ed9df22b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AVLTree">
+      <UniqueIdentifier>{3f5cb4fe-00d3-499a-8b00-8f6f64569ffd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -38,6 +41,12 @@
     <ClCompile Include="DoubleLinkedList.cpp">
       <Filter>DoubleLinkedList</Filter>
     </ClCompile>
+    <ClCompile Include="AVLNode.cpp">
+      <Filter>AVLTree</Filter>
+    </ClCompile>
+    <ClCompile Include="AVLTree.cpp">
+      <Filter>AVLTree</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LLNode.h">
@@ -57,6 +66,12 @@
     </ClInclude>
     <ClInclude Include="DoubleLinkedList.h">
       <Filter>DoubleLinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLNode.h">
+      <Filter>AVLTree</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLTree.h">
+      <Filter>AVLTree</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
