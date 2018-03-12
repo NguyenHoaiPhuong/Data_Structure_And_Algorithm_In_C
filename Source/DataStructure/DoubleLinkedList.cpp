@@ -90,7 +90,10 @@ bool CDoubleLinkedList::Remove(const long & key)
 				pCurNode->m_pPrev.reset();
 				pCurNode->m_pNext.reset();
 				pPrevNode->m_pNext = pNextNode;
-				pNextNode->m_pPrev = pPrevNode;
+				if (pNextNode)
+					pNextNode->m_pPrev = pPrevNode;
+				else
+					m_pTail = pPrevNode;
 				return true;
 			}
 			else
