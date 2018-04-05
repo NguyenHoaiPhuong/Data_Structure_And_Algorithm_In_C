@@ -2,19 +2,49 @@
 #include <memory>
 #include <vector>
 
+enum InsertDirection
+{
+	LEFT = 0,
+	RIGHT
+};
+
+enum UnbalancedType
+{
+	NONE = 0,
+	RR,
+	RL,
+	LL,
+	LR
+};
+
 class CAVLNode
 {
 	friend class CAVLTree;
 private:
 	long m_iKey;
 	long m_iHeight;
+	long m_iBalance;
 	std::shared_ptr<CAVLNode> m_pLeft;
 	std::shared_ptr<CAVLNode> m_pRight;
 	std::shared_ptr<CAVLNode> m_pParent;
 
 protected:
+	bool UpdateSubTree(std::shared_ptr<CAVLNode>& curNode);
+	void UpdateBalanceAndHeight();
+	UnbalancedType GetUnbalanceType(std::shared_ptr<CAVLNode>& curNode);
+
+	void RotateRight(std::shared_ptr<CAVLNode>& pCurNode);
+	void RotateLeft(std::shared_ptr<CAVLNode>& pCurNode);
+	void RotateLeftRight(std::shared_ptr<CAVLNode>& pCurNode);
+	void RotateRightLeft(std::shared_ptr<CAVLNode>& pCurNode);
+	
+	bool Insert(const long& key, const std::shared_ptr<CAVLNode>& curNode, std::shared_ptr<CAVLNode>& rootNode);
+	bool Remove(const long& key, const std::shared_ptr<CAVLNode>& curNode, std::shared_ptr<CAVLNode>& rootNode);
+	CAVLNode* Find(const long& key);
+	CAVLNode* FindMax();
+	CAVLNode* FindMin();
 	void TraverseTree(std::vector<long>& array);
-	bool Insert(const long& key);
+
 
 public:
 	CAVLNode(const long& key, std::shared_ptr<CAVLNode> pParent = nullptr);
@@ -25,6 +55,9 @@ public:
 
 	long GetHeight();
 	void SetHeight(const long& height);
+
+	long GetBalance();
+	void SetBalance(const long& balance);
 
 	CAVLNode* GetLeftNode();
 	void SetLeftNode(std::shared_ptr<CAVLNode> pLeft);
