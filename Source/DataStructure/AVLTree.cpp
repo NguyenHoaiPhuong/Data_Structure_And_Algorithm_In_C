@@ -24,7 +24,10 @@ bool CAVLTree::Insert(const long & key)
 
 bool CAVLTree::Remove(const long & key)
 {
-	return false;
+	if (m_pRoot == nullptr)
+		return false;
+	else
+		return m_pRoot->Remove(key, m_pRoot, m_pRoot);
 }
 
 std::vector<long> CAVLTree::TraverseTree()
@@ -35,41 +38,41 @@ std::vector<long> CAVLTree::TraverseTree()
 	return array;
 }
 
-CAVLNode * CAVLTree::Find(const long & key)
+std::shared_ptr<CAVLNode> CAVLTree::Find(const long & key)
 {
 	if (!m_pRoot)
 		return nullptr;
 	else
-		return m_pRoot->Find(key);
+		return m_pRoot->Find(key, m_pRoot);
 }
 
-CAVLNode * CAVLTree::FindMax()
+std::shared_ptr<CAVLNode> CAVLTree::FindMax()
 {
 	if (m_pRoot == nullptr)
 		return nullptr;
 	else
-		return m_pRoot->FindMax();
+		return m_pRoot->FindMax(m_pRoot);
 }
 
-CAVLNode * CAVLTree::FindMin()
+std::shared_ptr<CAVLNode> CAVLTree::FindMin()
 {
 	if (m_pRoot == nullptr)
 		return nullptr;
 	else
-		return m_pRoot->FindMin();
+		return m_pRoot->FindMin(m_pRoot);
 }
 
-CAVLNode * CAVLTree::FindMax(CAVLNode * pRoot)
+std::shared_ptr<CAVLNode> CAVLTree::FindMax(std::shared_ptr<CAVLNode> pRoot)
 {
 	if (pRoot)
-		return pRoot->FindMax();
+		return pRoot->FindMax(pRoot);
 	return nullptr;
 }
 
-CAVLNode * CAVLTree::FindMin(CAVLNode * pRoot)
+std::shared_ptr<CAVLNode> CAVLTree::FindMin(std::shared_ptr<CAVLNode> pRoot)
 {
 	if (pRoot)
-		return pRoot->FindMin();
+		return pRoot->FindMin(pRoot);
 	return nullptr;
 }
 

@@ -14,10 +14,10 @@ public:
 	bool Insert(const long& key);
 	bool Remove(const long& key);
 	std::vector<long> TraverseTree();
-	CAVLNode* Find(const long& key);
-	CAVLNode* FindMax();					// Tree
-	CAVLNode* FindMin();					// Tree
-	CAVLNode* FindMax(CAVLNode* pRoot);		// Subtree
-	CAVLNode* FindMin(CAVLNode* pRoot);		// Subtree
+	std::shared_ptr<CAVLNode> Find(const long& key);
+	std::shared_ptr<CAVLNode> FindMax();					// Tree
+	std::shared_ptr<CAVLNode> FindMin();					// Tree
+	std::shared_ptr<CAVLNode> FindMax(std::shared_ptr<CAVLNode> pRoot);		// Subtree
+	std::shared_ptr<CAVLNode> FindMin(std::shared_ptr<CAVLNode> pRoot);		// Subtree
 	void Print();
 };

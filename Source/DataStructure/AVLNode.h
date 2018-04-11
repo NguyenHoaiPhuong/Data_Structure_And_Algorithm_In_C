@@ -2,9 +2,10 @@
 #include <memory>
 #include <vector>
 
-enum InsertDirection
+enum Direction
 {
-	LEFT = 0,
+	UNKNOWN = 0,
+	LEFT,
 	RIGHT
 };
 
@@ -39,10 +40,19 @@ protected:
 	void RotateRightLeft(std::shared_ptr<CAVLNode>& pCurNode);
 	
 	bool Insert(const long& key, const std::shared_ptr<CAVLNode>& curNode, std::shared_ptr<CAVLNode>& rootNode);
-	bool Remove(const long& key, const std::shared_ptr<CAVLNode>& curNode, std::shared_ptr<CAVLNode>& rootNode);
-	CAVLNode* Find(const long& key);
-	CAVLNode* FindMax();
-	CAVLNode* FindMin();
+	bool Remove(const long& key, std::shared_ptr<CAVLNode>& curNode, std::shared_ptr<CAVLNode>& rootNode);
+	bool RemoveLeft(const long& key, std::shared_ptr<CAVLNode>& curNode, std::shared_ptr<CAVLNode>& rootNode);
+	bool RemoveRight(const long& key, std::shared_ptr<CAVLNode>& curNode, std::shared_ptr<CAVLNode>& rootNode);
+	void RemoveLeaf(std::shared_ptr<CAVLNode>& curNode, std::shared_ptr<CAVLNode>& rootNode);
+	void RemoveNodeOneChild(std::shared_ptr<CAVLNode>& curNode, std::shared_ptr<CAVLNode>& rootNode);
+	void RemoveNodeTwoChild(std::shared_ptr<CAVLNode>& curNode, std::shared_ptr<CAVLNode>& rootNode);
+
+	void Swap(std::shared_ptr<CAVLNode>& p1, std::shared_ptr<CAVLNode>& p2);
+	bool IsLeaf(std::shared_ptr<CAVLNode>& p);
+
+	std::shared_ptr<CAVLNode> Find(const long& key, std::shared_ptr<CAVLNode>& curNode);
+	std::shared_ptr<CAVLNode> FindMax(std::shared_ptr<CAVLNode>& curNode);
+	std::shared_ptr<CAVLNode> FindMin(std::shared_ptr<CAVLNode>& curNode);
 	void TraverseTree(std::vector<long>& array);
 
 
