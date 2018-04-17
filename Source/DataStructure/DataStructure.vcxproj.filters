@@ -18,6 +18,9 @@
     <Filter Include="AVLTree">
       <UniqueIdentifier>{3f5cb4fe-00d3-499a-8b00-8f6f64569ffd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Heap">
+      <UniqueIdentifier>{323d8087-25f8-4a75-8f82-c5e526f5b9ff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -47,6 +50,12 @@
     <ClCompile Include="AVLTree.cpp">
       <Filter>AVLTree</Filter>
     </ClCompile>
+    <ClCompile Include="BinaryHeap.cpp">
+      <Filter>Heap</Filter>
+    </ClCompile>
+    <ClCompile Include="MinBinaryHeap.cpp">
+      <Filter>Heap</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LLNode.h">
@@ -72,6 +81,12 @@
     </ClInclude>
     <ClInclude Include="AVLTree.h">
       <Filter>AVLTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryHeap.h">
+      <Filter>Heap</Filter>
+    </ClInclude>
+    <ClInclude Include="MinBinaryHeap.h">
+      <Filter>Heap</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
