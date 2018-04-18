@@ -56,6 +56,9 @@
     <ClCompile Include="MinBinaryHeap.cpp">
       <Filter>Heap</Filter>
     </ClCompile>
+    <ClCompile Include="MaxBinaryHeap.cpp">
+      <Filter>Heap</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LLNode.h">
@@ -86,6 +89,9 @@
       <Filter>Heap</Filter>
     </ClInclude>
     <ClInclude Include="MinBinaryHeap.h">
+      <Filter>Heap</Filter>
+    </ClInclude>
+    <ClInclude Include="MaxBinaryHeap.h">
       <Filter>Heap</Filter>
     </ClInclude>
   </ItemGroup>

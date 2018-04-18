@@ -18,9 +18,8 @@ long CMinBinaryHeap::GetMax()
 	_ASSERT(m_iSize > 0);
 	long iLevel = GetLevel(m_iSize - 1);
 	const long sIdx = pow(2, iLevel) - 1;
-	const long eIdx = pow(2, iLevel + 1) - 2;
 	long maxKey = m_arKey[sIdx];
-	for (size_t k = sIdx + 1; k < eIdx; k++)
+	for (size_t k = sIdx + 1; k < m_iSize; k++)
 	{
 		if (m_arKey[k] > maxKey)
 			maxKey = m_arKey[k];
@@ -59,6 +58,7 @@ bool CMinBinaryHeap::Insert(const long & key)
 	m_arKey[m_iSize++] = key;
 	if (m_iSize > 1)
 		UpdateUp(m_iSize - 1);
+	return true;
 }
 
 bool CMinBinaryHeap::Remove(const long & key)
@@ -89,51 +89,14 @@ void CMinBinaryHeap::UpdateDown(const long & idx)
 {
 	long leftIdx = GetLeftChild(idx);
 	long rightIdx = GetRightChild(idx);
-	long minIdx = -1;
+	long minIdx = idx;
 	if (leftIdx != -1 && m_arKey[leftIdx] < m_arKey[idx])
 		minIdx = leftIdx;
-	if (rightIdx != -1 && m_arKey[rightIdx] < m_arKey[leftIdx])
+	if (rightIdx != -1 && m_arKey[rightIdx] < m_arKey[minIdx])
 		minIdx = rightIdx;
-	if (minIdx != -1)
+	if (minIdx != idx)
 	{
 		Swap(m_arKey[idx], m_arKey[minIdx]);
 		UpdateDown(minIdx);
-	}
-}
-
-void CMinBinaryHeap::PrintArray()
-{
-	for (size_t i = 0; i < m_iSize; i++)
-	{
-		std::cout << m_arKey[i] << std::endl;
-	}
-}
-
-void CMinBinaryHeap::PrintTree()
-{
-	InOrder();
-	long maxLevel = GetLevel(m_iSize - 1);
-	for (long k = 0; k < maxLevel; k++)
-	{
-		long pos = 0;
-		for (long idx = pow(2, k) - 1; idx < pow(2, k + 1) - 1; idx++)
-		{
-			for (long i = 0; i < m_arInOrderIndex[idx] - pos; i++)
-				std::cout << "\t";
-			std::cout << m_arKey[idx];			
-			pos = m_arInOrderIndex[idx];
-		}
-		std::cout << "\n";
-	}
-	{
-		long pos = 0;
-		for (long idx = pow(2, maxLevel) - 1; idx < m_iSize; idx++)
-		{
-			for (long i = 0; i < m_arInOrderIndex[idx] - pos; i++)
-				std::cout << "\t";
-			std::cout << m_arKey[idx];
-			pos = m_arInOrderIndex[idx];
-		}
-		std::cout << "\n";
 	}
 }

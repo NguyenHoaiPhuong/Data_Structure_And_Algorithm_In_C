@@ -1,7 +1,7 @@
 #pragma once
 #include "BinaryHeap.h"
 
-class CMinBinaryHeap : public CBinaryHeap
+class CMaxBinaryHeap : public CBinaryHeap
 {
 private:
 	//
@@ -11,7 +11,7 @@ protected:
 
 public:
 	// Constructor and destructor
-	CMinBinaryHeap(const long& iCapacity);
+	CMaxBinaryHeap(const long& iCapacity);
 
 	long GetMin() override;
 	long GetMax() override;

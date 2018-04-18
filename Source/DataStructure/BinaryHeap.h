@@ -21,10 +21,10 @@ protected:
 
 	bool IsFull() { return (m_iSize >= m_iCapacity) ? true : false; }
 	void Swap(long& a, long& b);
+	virtual void PrintArray();
+	virtual void PrintTree();
 
 	// Abstract functions, to be overwritten
-	virtual void PrintArray() = 0;
-	virtual void PrintTree() = 0;
 	virtual void UpdateUp(const long& idx) = 0;
 	virtual void UpdateDown(const long& idx) = 0;
 	

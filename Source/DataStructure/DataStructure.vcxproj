@@ -164,6 +164,7 @@
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LLNode.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MaxBinaryHeap.cpp" />
     <ClCompile Include="MinBinaryHeap.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -176,6 +177,7 @@
     <ClInclude Include="BinaryHeap.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LLNode.h" />
+    <ClInclude Include="MaxBinaryHeap.h" />
     <ClInclude Include="MinBinaryHeap.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -9,6 +9,7 @@ void CBinaryHeap::Swap(long & a, long & b)
 
 CBinaryHeap::CBinaryHeap(const long & iCapacity)
 {
+	_ASSERT(iCapacity > 0);
 	m_iSize = 0;
 
 	m_iCapacity = iCapacity;
@@ -25,7 +26,7 @@ long CBinaryHeap::GetParent(const long & idx)
 	_ASSERT(m_iSize > 0);
 	if (idx < 0 || idx >= m_iSize)
 		return -1;
-	return (long)0.5*(idx - 1);
+	return (long)(0.5*(idx - 1));
 }
 
 long CBinaryHeap::GetLeftChild(const long & idx)
@@ -106,4 +107,41 @@ void CBinaryHeap::InOrder(long& idx, long& InOrderIdx)
 	InOrderIdx++;
 	if (rightIdx < m_iSize)
 		InOrder(rightIdx, InOrderIdx);
+}
+
+void CBinaryHeap::PrintArray()
+{
+	for (size_t i = 0; i < m_iSize; i++)
+	{
+		std::cout << m_arKey[i] << std::endl;
+	}
+}
+
+void CBinaryHeap::PrintTree()
+{
+	InOrder();
+	long maxLevel = GetLevel(m_iSize - 1);
+	for (long k = 0; k < maxLevel; k++)
+	{
+		long pos = 0;
+		for (long idx = pow(2, k) - 1; idx < pow(2, k + 1) - 1; idx++)
+		{
+			for (long i = 0; i < m_arInOrderIndex[idx] - pos; i++)
+				std::cout << "\t";
+			std::cout << m_arKey[idx];
+			pos = m_arInOrderIndex[idx];
+		}
+		std::cout << "\n";
+	}
+	{
+		long pos = 0;
+		for (long idx = pow(2, maxLevel) - 1; idx < m_iSize; idx++)
+		{
+			for (long i = 0; i < m_arInOrderIndex[idx] - pos; i++)
+				std::cout << "\t";
+			std::cout << m_arKey[idx];
+			pos = m_arInOrderIndex[idx];
+		}
+		std::cout << "\n";
+	}
 }
