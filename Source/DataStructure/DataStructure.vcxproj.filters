@@ -21,6 +21,9 @@
     <Filter Include="Heap">
       <UniqueIdentifier>{323d8087-25f8-4a75-8f82-c5e526f5b9ff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Hash">
+      <UniqueIdentifier>{0b61fdb5-aedb-4d9e-9698-9f59c6cb7688}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -59,6 +62,12 @@
     <ClCompile Include="MaxBinaryHeap.cpp">
       <Filter>Heap</Filter>
     </ClCompile>
+    <ClCompile Include="HashNode.cpp">
+      <Filter>Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="HashTable.cpp">
+      <Filter>Hash</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LLNode.h">
@@ -93,6 +102,12 @@
     </ClInclude>
     <ClInclude Include="MaxBinaryHeap.h">
       <Filter>Heap</Filter>
+    </ClInclude>
+    <ClInclude Include="HashNode.h">
+      <Filter>Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="HashTable.h">
+      <Filter>Hash</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

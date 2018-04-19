@@ -161,6 +161,8 @@
     <ClCompile Include="DLLNode.cpp" />
     <ClCompile Include="DoubleLinkedList.cpp" />
     <ClCompile Include="BinaryHeap.cpp" />
+    <ClCompile Include="HashNode.cpp" />
+    <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LLNode.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -175,6 +177,8 @@
     <ClInclude Include="DLLNode.h" />
     <ClInclude Include="DoubleLinkedList.h" />
     <ClInclude Include="BinaryHeap.h" />
+    <ClInclude Include="HashNode.h" />
+    <ClInclude Include="HashTable.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LLNode.h" />
     <ClInclude Include="MaxBinaryHeap.h" />

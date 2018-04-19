@@ -255,6 +255,11 @@ void Test_Max_Heap()
 	Akagi.Print(PrintType::TREE);
 }
 
+void Test_Hash_Table()
+{
+	//
+}
+
 int main(int argc, char* argv[])
 {
 	//Test_Shared_PTR();
@@ -264,7 +269,8 @@ int main(int argc, char* argv[])
 	//Test_BST();
 	//Test_AVL_Tree();
 	//Test_Min_Heap();
-	Test_Max_Heap();
+	//Test_Max_Heap();
+	Test_Hash_Table();
 
 	getchar();
 	return 0;
