@@ -3,8 +3,10 @@
 class CHashNode
 {
 private:
-	long	m_iKey;
-	double	m_dData;
+	long		m_iKey;
+	double		m_dData;
+	CHashNode*	m_pNext;
+	CHashNode*	m_pPrev;
 protected:
 	//
 public:

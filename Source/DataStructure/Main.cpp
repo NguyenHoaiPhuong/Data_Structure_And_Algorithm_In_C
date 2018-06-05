@@ -257,7 +257,7 @@ void Test_Max_Heap()
 
 void Test_Hash_Table()
 {
-	//
+	
 }
 
 int main(int argc, char* argv[])

@@ -1,7 +1,7 @@
 #include "HashNode.h"
 
 CHashNode::CHashNode(const long & key, const double & data)
-	: m_iKey(key), m_dData(data)
+	: m_iKey(key), m_dData(data), m_pNext(0), m_pPrev(0)
 {
 }
 

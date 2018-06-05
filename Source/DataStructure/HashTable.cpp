@@ -2,7 +2,7 @@
 #include "HashTable.h"
 
 CHashTable::CHashTable()
-	:m_iSize(0)
+	:m_iSize(0), m_pHead(0), m_pTail(0)
 {
 	m_pTable = (CHashNode**)malloc(TABLE_SIZE * sizeof(CHashNode*));
 	for (long i = 0; i < TABLE_SIZE; i++)
@@ -32,18 +32,16 @@ long CHashTable::GetSize()
 
 bool CHashTable::Add(const long & key, const double & data)
 {
-	if (m_iSize == TABLE_SIZE)
-		return false;	// The table is full
+	if (m_iSize == TABLE_SIZE - 1)
+	{
+		std::cout << "The table is FULL now.Operation Add cannot be implemented next time.\n";
+		return false;
+	}
 	long idx = Hash(key);
 	if (idx == -1)
 		return false;	// The key already exists in the table
 	m_pTable[idx] = new CHashNode(key, data);
 	m_iSize++;
-	if (m_iSize == TABLE_SIZE)
-	{
-		std::cout << "The table is FULL now. Operations such as Remove and Find can cause error. \ n";
-		std::cout << "Operation Add cannot be implemented next time.\n";
-	}
 	return true;
 }
 
@@ -60,6 +58,27 @@ bool CHashTable::Delete(const long & key)
 CHashNode * CHashTable::Find(const long & key)
 {
 	long idx = Hash(key);
+	if (idx == -1)
+		return nullptr;
+	else
+		return m_pTable[idx];
+}
+
+CHashNode * CHashTable::GetHead()
+{
+	if (m_iSize == 0)
+		return nullptr;
+	long i = 0;
+	while (m_pTable[i] == nullptr)
+	{
+		i++;
+	}
+	return m_pTable[i];
+}
+
+void CHashTable::Next(CHashNode *& pNode)
+{
+
 }
 
 long CHashTable::Hash(const long& key)
