@@ -8,7 +8,7 @@ CLinkedList::~CLinkedList()
 {
 }
 
-void CLinkedList::Insert(const double & data)
+void CLinkedList::Insert(const long & data)
 {
 	if (m_pHead.get() == nullptr)
 		m_pHead.reset(new CLLNode(data));

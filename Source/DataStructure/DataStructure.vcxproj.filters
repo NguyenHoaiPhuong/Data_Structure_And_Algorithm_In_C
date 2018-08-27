@@ -62,9 +62,6 @@
     <ClCompile Include="MaxBinaryHeap.cpp">
       <Filter>Heap</Filter>
     </ClCompile>
-    <ClCompile Include="HashNode.cpp">
-      <Filter>Hash</Filter>
-    </ClCompile>
     <ClCompile Include="HashTable.cpp">
       <Filter>Hash</Filter>
     </ClCompile>
@@ -103,11 +100,11 @@
     <ClInclude Include="MaxBinaryHeap.h">
       <Filter>Heap</Filter>
     </ClInclude>
-    <ClInclude Include="HashNode.h">
-      <Filter>Hash</Filter>
-    </ClInclude>
     <ClInclude Include="HashTable.h">
       <Filter>Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="TestHashTable.h">
+      <Filter>Main</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

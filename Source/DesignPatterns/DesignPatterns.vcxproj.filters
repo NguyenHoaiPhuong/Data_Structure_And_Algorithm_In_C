@@ -13,6 +13,9 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
+    <Filter Include="Sunshine">
+      <UniqueIdentifier>{504bcaae-8427-46eb-8a9a-baf1ab8d14cd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -25,6 +28,15 @@
   <ItemGroup>
     <ClInclude Include="ModelViewControl.h">
       <Filter>MVC</Filter>
+    </ClInclude>
+    <ClInclude Include="TestMVC.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Animal.h">
+      <Filter>Sunshine</Filter>
+    </ClInclude>
+    <ClInclude Include="Animal_Operation.h">
+      <Filter>Sunshine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

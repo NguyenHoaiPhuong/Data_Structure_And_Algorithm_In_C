@@ -12,7 +12,7 @@ public:
 	CLinkedList();
 	~CLinkedList();
 
-	void Insert(const double& data);
+	void Insert(const long& data);
 	CLLNode* Find(const long& key);
 	void Remove(const long& key);
 	void RemoveAll();

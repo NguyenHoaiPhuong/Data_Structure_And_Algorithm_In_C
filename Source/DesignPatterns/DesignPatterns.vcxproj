@@ -158,7 +158,10 @@
     <ClCompile Include="ModelViewControl.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animal.h" />
+    <ClInclude Include="Animal_Operation.h" />
     <ClInclude Include="ModelViewControl.h" />
+    <ClInclude Include="TestMVC.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,6 +6,8 @@
 #include "MinBinaryHeap.h"
 #include "MaxBinaryHeap.h"
 
+#include "TestHashTable.h"
+
 void Test_Shared_PTR()
 {
 	int* p = new int(3);
@@ -255,10 +257,6 @@ void Test_Max_Heap()
 	Akagi.Print(PrintType::TREE);
 }
 
-void Test_Hash_Table()
-{
-	
-}
 
 int main(int argc, char* argv[])
 {
@@ -270,7 +268,7 @@ int main(int argc, char* argv[])
 	//Test_AVL_Tree();
 	//Test_Min_Heap();
 	//Test_Max_Heap();
-	Test_Hash_Table();
+	TestHashTable();
 
 	getchar();
 	return 0;
