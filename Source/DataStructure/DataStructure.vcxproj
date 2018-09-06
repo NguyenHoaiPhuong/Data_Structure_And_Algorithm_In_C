@@ -181,7 +181,15 @@
     <ClInclude Include="LLNode.h" />
     <ClInclude Include="MaxBinaryHeap.h" />
     <ClInclude Include="MinBinaryHeap.h" />
+    <ClInclude Include="TestAVLTree.h" />
+    <ClInclude Include="TestBinarySearchTree.h" />
+    <ClInclude Include="TestDoubleLinkedList.h" />
     <ClInclude Include="TestHashTable.h" />
+    <ClInclude Include="TestIterator.h" />
+    <ClInclude Include="TestLinkedList.h" />
+    <ClInclude Include="TestMaxBinaryHeap.h" />
+    <ClInclude Include="TestMinBinaryHeap.h" />
+    <ClInclude Include="TestSharedPointer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

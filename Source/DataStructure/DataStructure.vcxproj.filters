@@ -106,5 +106,29 @@
     <ClInclude Include="TestHashTable.h">
       <Filter>Main</Filter>
     </ClInclude>
+    <ClInclude Include="TestSharedPointer.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="TestLinkedList.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDoubleLinkedList.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="TestBinarySearchTree.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="TestAVLTree.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="TestMinBinaryHeap.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="TestMaxBinaryHeap.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="TestIterator.h">
+      <Filter>Main</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

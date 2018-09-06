@@ -162,6 +162,7 @@
     <ClInclude Include="Animal_Operation.h" />
     <ClInclude Include="ModelViewControl.h" />
     <ClInclude Include="TestMVC.h" />
+    <ClInclude Include="TestSunshine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

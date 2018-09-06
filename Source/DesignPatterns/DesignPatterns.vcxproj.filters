@@ -38,5 +38,8 @@
     <ClInclude Include="Animal_Operation.h">
       <Filter>Sunshine</Filter>
     </ClInclude>
+    <ClInclude Include="TestSunshine.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
