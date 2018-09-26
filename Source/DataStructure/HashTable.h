@@ -155,7 +155,16 @@ public:
 	{
 		if (itHead != NULL)
 			itHead = itHead->next;
+		return *this;
 	}
+	Iterator operator++(Item)
+	{
+		Node* tmp = itHead;
+		operator++();
+		return tmp;
+	}
+
+	Iterator operator+()
 };
 
 
