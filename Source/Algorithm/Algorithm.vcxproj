@@ -154,8 +154,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="TestBubbleSort.h" />
-    <ClInclude Include="TestInsertionSort.h" />
+    <ClInclude Include="MergeSort.h" />
+    <ClInclude Include="QuickSort.h" />
+    <ClInclude Include="RecursiveInsertionSort.h" />
+    <ClInclude Include="SelectionSort.h" />
+    <ClInclude Include="BubbleSort.h" />
+    <ClInclude Include="InsertionSort.h" />
+    <ClInclude Include="Utilities.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />

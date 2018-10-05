@@ -1,14 +1,7 @@
 #pragma once
 #include <iostream>
 #include <vector>
-
-template<typename T>
-void Swap(T& a, T&b)
-{
-	T tmp = a;
-	a = b;
-	b = tmp;
-}
+#include "Utilities.h"
 
 template<typename T>
 void SortingBubble(const size_t& size, T* arr)
@@ -35,4 +28,5 @@ void TestBubbleSort()
 	std::cout << "After Bubble Sorting:\n";
 	for (size_t i = 0; i < a.size(); i++)
 		std::cout << a[i] << "\t";
+	std::cout << "\n";
 }
