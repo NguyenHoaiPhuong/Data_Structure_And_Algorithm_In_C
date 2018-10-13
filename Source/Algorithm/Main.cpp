@@ -1,4 +1,5 @@
 #include "BubbleSort.h"
+#include "RecursiveBubbleSort.h"
 #include "InsertionSort.h"
 #include "RecursiveInsertionSort.h"
 #include "MergeSort.h"
@@ -8,8 +9,9 @@
 int main(int argc, char* argv[])
 {
 	//TestBubbleSort();
+	//TestRecursiveBubbleSort();
 	//TestInsertionSort();
-	TestRecursiveInsertionSort();
+	//TestRecursiveInsertionSort();
 	//TestMergeSort();
 	//TestSelectionSort();
 	//TestQuickSort();
