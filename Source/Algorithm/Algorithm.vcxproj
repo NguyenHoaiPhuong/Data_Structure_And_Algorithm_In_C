@@ -158,6 +158,7 @@
     <ClInclude Include="QuickSort.h" />
     <ClInclude Include="RecursiveBubbleSort.h" />
     <ClInclude Include="RecursiveInsertionSort.h" />
+    <ClInclude Include="RecursiveSelectionSort.h" />
     <ClInclude Include="SelectionSort.h" />
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="InsertionSort.h" />

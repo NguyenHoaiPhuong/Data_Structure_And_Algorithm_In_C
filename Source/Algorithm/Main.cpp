@@ -4,6 +4,7 @@
 #include "RecursiveInsertionSort.h"
 #include "MergeSort.h"
 #include "SelectionSort.h"
+#include "RecursiveSelectionSort.h"
 #include "QuickSort.h"
 
 int main(int argc, char* argv[])
@@ -15,6 +16,7 @@ int main(int argc, char* argv[])
 	//TestMergeSort();
 	//TestSelectionSort();
 	//TestQuickSort();
+	TestRecursiveSelectionSort();
 
 	getchar();
 }
