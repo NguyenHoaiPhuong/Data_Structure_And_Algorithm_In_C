@@ -48,6 +48,9 @@
     <ClInclude Include="RecursiveSelectionSort.h">
       <Filter>Sorting</Filter>
     </ClInclude>
+    <ClInclude Include="MergeSort3Way.h">
+      <Filter>Sorting</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">

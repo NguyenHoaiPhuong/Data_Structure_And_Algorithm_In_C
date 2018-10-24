@@ -155,6 +155,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="MergeSort.h" />
+    <ClInclude Include="MergeSort3Way.h" />
     <ClInclude Include="QuickSort.h" />
     <ClInclude Include="RecursiveBubbleSort.h" />
     <ClInclude Include="RecursiveInsertionSort.h" />
